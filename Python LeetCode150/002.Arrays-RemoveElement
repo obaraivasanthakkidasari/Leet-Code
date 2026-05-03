@@ -48,9 +48,10 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
-        i = 0
-        for x in nums:
-            if x != val:
-                nums[i] = x
-                i += 1
-        return i    
+        k = 0
+        for i in range(len(nums)):
+            if nums[i] != val:
+                nums[k] = nums[i]
+                k += 1
+        return k
+        
