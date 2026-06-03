@@ -25,3 +25,14 @@ Explanation: You need to reduce multiple spaces between two words to a single sp
 
 //
 
+class Solution {
+    public String reverseWords(String s) {
+        String[] words = s.trim().split("\\s+");
+        String result = "";
+
+        for (int i= words.length-1;i >=0; i--) {
+            result += words[i] + " ";
+        }
+        return result.trim();
+    }
+}
